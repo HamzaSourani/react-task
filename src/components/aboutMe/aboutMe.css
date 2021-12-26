@@ -1,0 +1,132 @@
+.body {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: 200px repeat(3, 1fr) 0.4fr;
+  grid-template-areas:
+    "header header"
+    "experiences certificate "
+    "experiences skills "
+    " myWork myWork "
+    "footer footer";
+  gap: 2em;
+  padding: 10px;
+}
+.header {
+  grid-area: header;
+  display: grid;
+
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 200px;
+  padding-left: 50px;
+  background: linear-gradient(
+    to right,
+    rgb(249 130 130),
+    rgb(98 200 249),
+    rgb(71 60 239)
+  );
+  border-radius: 2em 0 0 2em;
+  box-shadow: 1px 1px 3px 3px rgb(220 240 251);
+}
+
+header .imgContainer {
+  grid-column: 1;
+}
+header .imgContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2em;
+}
+p {
+  align-self: center;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 3px;
+}
+header p::first-letter {
+  color: #f98282;
+}
+.experiences {
+  grid-area: experiences;
+  padding: 20px;
+  background-color: #f98282;
+  border-radius: 2em;
+  box-shadow: 1px 1px 3px 3px rgb(251 220 220);
+}
+.goodLanguage,
+.badLanguage {
+  margin-left: 5px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #611616;
+}
+.goodLanguage {
+  background-color: #f90101;
+}
+.badLanguage {
+  background-color: #bd9494;
+}
+ul {
+  list-style: none;
+  background-color: #fbf4f4;
+  border-radius: 0.5em;
+  font-size: large;
+  color: #883131;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 15px;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid #611616;
+  box-shadow: 0 0 0 3px rgb(251 220 220);
+}
+.experiencesList {
+  padding: 15px;
+}
+
+li {
+  padding: 10px;
+  position: relative;
+}
+.languageRate {
+  display: flex;
+  align-items: center;
+}
+.certificate {
+  grid-area: certificate;
+  padding: 10px;
+  background-color: #62c8f9;
+  border-radius: 2em;
+  box-shadow: 1px 1px 3px 3px rgb(138 195 243);
+}
+.skills {
+  grid-area: skills;
+  padding: 20px;
+  background-color: #62c8f9;
+  border-radius: 2em;
+  box-shadow: 1px 1px 3px 3px rgb(138 195 243);
+}
+.myWork {
+  grid-area: myWork;
+  padding: 20px;
+  background-color: #62c8f9;
+  border-radius: 2em;
+  box-shadow: 1px 1px 3px 3px rgb(138 195 243);
+}
+.footer {
+  grid-area: footer;
+  padding: 20px;
+  background-color: #f98282;
+  border-radius: 2em;
+  box-shadow: 1px 1px 3px 3px rgb(251 220 220);
+}

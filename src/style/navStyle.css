@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+}
+
+.navButton,
+.DrawerNavButton {
+  color: rgb(134, 121, 165);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0 7px;
+}
+.navButton:hover {
+  border-bottom: 1px solid white;
+}
+.navButtonActive {
+  font-weight: bold;
+  color: rgb(223, 215, 215);
+  border-bottom: 1px solid white;
+}
+.DrawerNavButton {
+  color: black;
+}
+.DrawerNavButton:hover {
+  border-bottom: 1px solid rgb(8, 32, 248);
+}
+.DrawerNavButtonActive {
+  font-weight: bold;
+  font-size: 20px;
+}
